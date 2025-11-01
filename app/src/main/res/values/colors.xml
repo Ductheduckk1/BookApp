@@ -5,6 +5,150 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+    <color name="red">#EE0033</color>
     <color name="black">#FF000000</color>
+    <color name="gray">#A0A0A0</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="bg_keypad">#9EA6D9</color>
+    <color name="bg_stroke_keypad">#041160</color>
+    <color name="base">#15191E</color>
+    <color name="base_50">#8015191E</color>
+
+    <attr name="vctr_toolbar_background" format="color" />
+
+    <color name="vctr_notice_secondary_alpha12">#1E61708B</color>
+    <color name="half_transparent_status_bar">#00FFFFFF</color>
+    <color name="black_alpha">#55000000</color>
+
+    <color name="blue_50">#CAE8FF</color>
+    <color name="blue_100">#A5D6FF</color>
+    <color name="blue_200">#79C0FF</color>
+    <color name="blue_300">#58A6FF</color>
+    <color name="blue_400">#388BFD</color>
+    <color name="blue_500">#206FEB</color>
+    <color name="blue_600">#1158C7</color>
+    <color name="blue_700">#0D419D</color>
+    <color name="blue_800">#0D2D6B</color>
+    <color name="blue_900">#051D4D</color>
+    <color name="blue_1000">#3242AB</color>
+    <color name="blue_1100">#293796</color>
+    <color name="blue_1200">#202EBA</color>
+    <color name="blue_1300">#121F73</color>
+    <color name="blue_1400">#051061</color>
+    <color name="blue_bg">#26206FEB</color>
+
+    <color name="red_20">#33DA3633</color>
+    <color name="red_50">#80DA3633</color>
+    <color name="red_100">#FFDAD5</color>
+    <color name="red_200">#FFC1BA</color>
+    <color name="red_300">#FFA198</color>
+    <color name="red_400">#FF7B72</color>
+    <color name="red_500">#F85149</color>
+    <color name="red_600">#DA3633</color>
+    <color name="red_700">#B62324</color>
+    <color name="red_800">#8E1619</color>
+    <color name="red_900">#67090D</color>
+    <color name="red_1000">#490402</color>
+    <color name="red_1100">#870D31</color>
+    <color name="red_1200">#76072A</color>
+    <color name="red_1300">#650423</color>
+    <color name="red_1400">#54011C</color>
+
+    <attr name="vctr_fab_label_bg" format="color" />
+    <attr name="vctr_fab_label_splash" format="color" />
+    <attr name="vctr_fab_label_button_splash" format="color" />
+    <attr name="vctr_fab_background_splash" format="color" />
+    <color name="vctr_fab_label_bg_light">@android:color/white</color>
+    <color name="vctr_fab_label_bg_dark">#FF181B21</color>
+    <color name="vctr_fab_label_bg_black">#FF181B21</color>
+
+    <attr name="vctr_fab_label_stroke" format="color" />
+    <color name="vctr_fab_label_stroke_light">#1EFFFFFF</color>
+    <color name="vctr_fab_label_stroke_dark">@android:color/black</color>
+    <color name="vctr_fab_label_stroke_black">@android:color/black</color>
+
+    <attr name="vctr_fab_label_color" format="color" />
+    <color name="vctr_fab_label_color_light">#FF2E2F32</color>
+    <color name="vctr_fab_label_color_dark">#FFA1B2D1</color>
+    <color name="vctr_fab_label_color_black">#FFA1B2D1</color>
+
+    <attr name="vctr_touch_guard_bg" format="color" />
+    <color name="vctr_touch_guard_bg_light">#66000000</color>
+    <color name="vctr_touch_guard_bg_dark">#BF000000</color>
+    <color name="vctr_touch_guard_bg_black">#BF000000</color>
+
+    <attr name="vctr_room_active_widgets_banner_bg" format="color" />
+    <color name="vctr_room_active_widgets_banner_bg_light">#EBEFF5</color>
+    <color name="vctr_room_active_widgets_banner_bg_dark">#27303A</color>
+    <color name="vctr_room_active_widgets_banner_bg_black">#27303A</color>
+
+    <attr name="vctr_room_active_widgets_banner_text" format="color" />
+    <color name="vctr_room_active_widgets_banner_text_light">#61708B</color>
+    <color name="vctr_room_active_widgets_banner_text_dark">#E3E8F0</color>
+    <color name="vctr_room_active_widgets_banner_text_black">#E3E8F0</color>
+
+    <attr name="vctr_waiting_background_color" format="color" />
+    <color name="vctr_waiting_background_color_light">#AAAAAAAA</color>
+    <color name="vctr_waiting_background_color_dark">#55555555</color>
+
+    <color name="vctr_disabled_view_color_light">#EEEEEE</color>
+
+    <attr name="vctr_reaction_background_off" format="color" />
+    <color name="vctr_reaction_background_off_light">#FFF3F8FD</color>
+    <color name="vctr_reaction_background_off_dark">#22252B</color>
+    <color name="vctr_reaction_background_off_black">#22252B</color>
+
+    <attr name="vctr_reaction_background_on" format="color" />
+    <color name="vctr_reaction_background_on_light">#2011BC8A</color>
+    <color name="vctr_reaction_background_on_dark">#4011BC8A</color>
+    <color name="vctr_reaction_background_on_black">#4011BC8A</color>
+
+    <!-- (color from RiotWeb) -->
+    <attr name="vctr_keys_backup_banner_accent_color" format="color" />
+    <color name="vctr_keys_backup_banner_accent_color_light">#FFF8E3</color>
+    <color name="vctr_keys_backup_banner_accent_color_dark">#22262E</color>
+
+    <attr name="vctr_chat_effect_snow_background" format="color" />
+    <color name="vctr_chat_effect_snow_background_light">@color/black_alpha</color>
+    <color name="vctr_chat_effect_snow_background_dark">@android:color/transparent</color>
+
+    <attr name="vctr_toast_background" format="color" />
+    <color name="vctr_toast_background_light">@color/palette_black_900</color>
+    <color name="vctr_toast_background_dark">@color/palette_gray_400</color>
+
+    <!-- Presence Indicator colors -->
+    <attr name="vctr_presence_indicator_offline" format="color" />
+    <color name="vctr_presence_indicator_offline_light">@color/palette_gray_100</color>
+    <color name="vctr_presence_indicator_offline_dark">@color/palette_gray_450</color>
+
+    <attr name="vctr_presence_indicator_online" format="color" />
+    <color name="vctr_presence_indicator_online_light">@color/palette_element_green</color>
+    <color name="vctr_presence_indicator_online_dark">@color/palette_element_green</color>
+
+    <attr name="vctr_presence_indicator_busy" format="color" />
+    <color name="vctr_presence_indicator_busy_light">@color/element_alert_light</color>
+    <color name="vctr_presence_indicator_busy_dark">@color/element_alert_dark</color>
+
+    <attr name="vctr_presence_indicator_away" format="color" />
+    <color name="vctr_presence_indicator_away_light">@color/palette_element_orange</color>
+    <color name="vctr_presence_indicator_away_dark">@color/palette_element_orange</color>
+
+    <!-- Location sharing colors -->
+    <attr name="vctr_live_location" format="color" />
+    <color name="vctr_live_location_light">@color/palette_prune</color>
+    <color name="vctr_live_location_dark">@color/palette_prune</color>
+
+    <!--    Text colors-->
+    <attr name="color_primary_text" format="color"/>
+    <color name="color_primary_text_light">#021B84</color>
+    <color name="color_secondary_text_light">#C7C7C7</color>
+
+    <attr name="color_secondary_text" format="color"/>
+    <color name="color_primary_text_dark">#FFFFFF</color>
+    <color name="color_secondary_text_dark">#C7C7C7</color>
+    <color name="color_tertiary_text_dark">#AFBAC5</color>
+
+    <!-- Dark overlay for camera shutter effect -->
+    <color name="flash_overlay">#66000000</color>
+    <color name="preview_button_background">#8015191E</color>
 </resources>

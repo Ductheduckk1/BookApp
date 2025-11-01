@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Timeline bubble background colors -->
+    <attr name="vctr_message_bubble_inbound" format="color" />
+    <color name="vctr_message_bubble_inbound_light">#FEFEFE</color>
+    <color name="vctr_message_bubble_inbound_dark">#30373D</color>
+    <attr name="vctr_message_bubble_outbound" format="color" />
+    <color name="vctr_message_bubble_outbound_light">#E5ECF8</color>
+    <color name="vctr_message_bubble_outbound_dark">#80206FEB</color>
+</resources>

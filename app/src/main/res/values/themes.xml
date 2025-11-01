@@ -1,5 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BookApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="vctr_toolbar_background">@color/black</item>
+        <item name="vctr_waiting_background_color">#55555555</item>
+        <!-- Customize your theme here. -->
 
-    <style name="Theme.BookApp" parent="android:Theme.Material.Light.NoActionBar" />
+        <item name="vctr_content_primary">@color/element_content_primary_dark</item>
+        <item name="vctr_content_secondary">@color/element_content_secondary_dark</item>
+        <item name="vctr_content_tertiary">@color/element_content_tertiary_dark</item>
+        <item name="vctr_content_quaternary">@color/element_content_quaternary_dark</item>
+        <item name="vctr_content_quinary">@color/element_content_quinary_dark</item>
+        <item name="vctr_bubble_message">#EDEDED</item>
+        <item name="vctr_bg_bottom_bar">@color/element_system_dark</item>
+        <item name="vctr_background_search">#232323</item>
+        <item name="vctr_background_toolbar">#15191E</item>
+        <item name="vctr_background_current_call">@color/blue_brand_laoId</item>
+        <item name="vctr_bg_chat_detail">@color/bg_chat_detail_dark</item>
+        <item name="vctr_bg_discovery">@color/element_system_dark</item>
+        <item name="vctr_bg_translate">@color/vctr_fab_label_bg_dark</item>
+        <item name="vctr_bg_switch_custom_on">#021B84</item>
+        <item name="vctr_bg_switch_custom_off">#424242</item>
+        <item name="vctr_bg_pinned_message">@color/element_background_dark</item>
+
+        <!-- system colors -->
+        <item name="vctr_system">@color/element_system_dark</item>
+
+        <!-- other colors -->
+        <item name="vctr_fab_label_bg">@color/vctr_fab_label_bg_dark</item>
+        <item name="vctr_fab_label_stroke">@color/vctr_fab_label_stroke_dark</item>
+        <item name="vctr_fab_label_color">@color/vctr_fab_label_color_dark</item>
+        <item name="vctr_touch_guard_bg">@color/vctr_touch_guard_bg_dark</item>
+        <item name="vctr_keys_backup_banner_accent_color">@color/vctr_keys_backup_banner_accent_color_dark</item>
+        <item name="vctr_room_active_widgets_banner_bg">@color/vctr_room_active_widgets_banner_bg_dark</item>
+        <item name="vctr_room_active_widgets_banner_text">@color/vctr_room_active_widgets_banner_text_dark</item>
+        <item name="vctr_reaction_background_off">@color/vctr_reaction_background_off_dark</item>
+        <item name="vctr_reaction_background_on">@color/vctr_reaction_background_on_dark</item>
+        <item name="vctr_chat_effect_snow_background">@color/vctr_chat_effect_snow_background_dark</item>
+        <item name="vctr_message_bubble_inbound">@color/vctr_message_bubble_inbound_dark</item>
+        <item name="vctr_message_bubble_outbound">@color/vctr_message_bubble_outbound_dark</item>
+
+        <item name="vctr_fab_label_splash">@color/element_label_splash_black</item>
+
+        <item name="vctr_fab_label_button_splash">@color/blue_brand_laoId</item>
+
+        <item name="vctr_fab_background_splash">@color/blue_brand_background_splash</item>
+        <item name="android:popupMenuStyle">@style/MyPopupMenuStyle</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/myPopupMenuTextAppearanceLarge</item>
+        <item name="android:textAppearanceSmallPopupMenu">@style/myPopupMenuTextAppearanceSmall</item>
+    </style>
+
+    <style name="Theme.BookApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.BookApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.BookApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TransparentBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    
+    <style name="Theme.BookApp.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.BookApp</item>
+    </style>
 </resources>
