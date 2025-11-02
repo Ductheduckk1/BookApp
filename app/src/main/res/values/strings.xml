@@ -136,4 +136,8 @@
     <string name="explore">Explore</string>
     <string name="book_list">Book list</string>
     <string name="profile">Profile</string>
+
+
+    <!--    new string-->
+    <string name="text_underline"><u>Quên mật khẩu?</u></string>
 </resources>
