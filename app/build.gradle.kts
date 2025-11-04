@@ -14,7 +14,7 @@ android {
     defaultConfig {
         applicationId = "com.example.bookapp"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -35,13 +35,26 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
     buildFeatures {
-        compose = true
         viewBinding = true
+        buildConfig = true
+    }
+    packaging {
+        resources {
+            excludes += "META-INF/NOTICE.md"
+            excludes += "META-INF/LICENSE.md"
+            excludes += "META-INF/LICENSE.txt"
+            excludes += "META-INF/DEPENDENCIES"
+        }
+    }
+    kotlinOptions {
+        jvmTarget = "11"
     }
 }
 
 dependencies {
     implementation("androidx.core:core-splashscreen:1.0.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -64,7 +77,6 @@ dependencies {
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
     androidTestImplementation(libs.hilt.android.testing)
-    implementation(libs.realm.monarchy)
     implementation(platform(libs.okhttp.bom))
     implementation(libs.okhttp)
     implementation(libs.logging.interceptor)
@@ -88,8 +100,6 @@ dependencies {
     implementation(libs.androidx.media3.exoplayer)
     implementation(libs.androidx.media3.exoplayer.rtsp)
     implementation(libs.androidx.media3.ui)
-    implementation (libs.rtsp.server)
-    implementation(libs.library)
 
     implementation(libs.camera.core)
     implementation(libs.camera.camera2)
@@ -103,4 +113,8 @@ hilt {
 
 kapt {
     correctErrorTypes = true
+}
+
+kotlin {
+    jvmToolchain(11)
 }

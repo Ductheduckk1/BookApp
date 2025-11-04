@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="140dp"
+    android:viewportWidth="100"
+    android:viewportHeight="140">
+
+    <!-- Nền màu xám nhẹ -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M0,0h100v140h-100z" />
+
+    <!-- Icon quyển sách đơn giản -->
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M20,20h60v100h-60z" />
+
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M20,20l10,5v95l-10,-5z" />
+</vector>
