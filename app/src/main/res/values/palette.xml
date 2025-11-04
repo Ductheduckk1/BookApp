@@ -51,6 +51,7 @@
     <color name="palette_gray_700">#30373D</color>
     <color name="palette_black_800">#15191E</color>
     <color name="palette_black_950">#21262C</color>
+    <color name="palette_brown">#504C45</color>
 
     <color name="blue_brand_laoId">#021B84</color>
     <color name="blue_brand_background_splash">#070E29</color>
