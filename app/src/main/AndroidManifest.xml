@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BookApp">
         <activity
+            android:name=".CustomFeedActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
@@ -21,10 +24,7 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".`LoginActivity.kt`"
-            android:exported="false" />
-        <activity
-            android:name=".activity_splashScreen"
+            android:name=".SplashActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

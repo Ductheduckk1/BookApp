@@ -32,4 +32,6 @@
         <item name="android:letterSpacing">0</item>
         <item name="android:textColor">?vctr_content_primary</item>
     </style>
+
+
 </resources>

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screem"
+    tools:context=".CustomFeedActivity">
+
+    <!-- Content Section -->
+    <ScrollView
+        android:id="@+id/scroll_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp">
+
+            <!-- Header -->
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Katalis"
+                    android:textColor="@color/backgrount_button"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:text="Bạn thích đọc thể loại sách nào nhất?"
+                android:textColor="@color/black_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header" />
+
+            <!-- Subtitle 1 -->
+            <TextView
+                android:id="@+id/tv_sub_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="8dp"
+                android:text="Hãy chọn ít nhất một loại sách mà bạn thấy hứng thú để đề xuất."
+                android:textColor="@color/black_text"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <!-- ChipGroup 1 -->
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_types"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="32dp"
+                app:chipSpacingHorizontal="12dp"
+                app:chipSpacingVertical="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_sub_1"
+                app:selectionRequired="false"
+                app:singleSelection="false">
+
+                 Example Chip
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="📚 Novel"
+                    android:textColor="@color/black"
+                    app:chipBackgroundColor="@color/background_screem"
+                    app:chipCornerRadius="12dp"
+                    app:chipStrokeColor="@color/border_buton"
+                    app:chipStrokeWidth="1dp" />
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:text="💬 Comic"-->
+<!--                    android:textColor="@color/chip_text_selector"-->
+<!--                    app:chipBackgroundColor="@color/chip_bg_selector"-->
+<!--                    app:chipCornerRadius="12dp"-->
+<!--                    app:chipStrokeColor="@color/chip_stroke_selector"-->
+<!--                    app:chipStrokeWidth="1dp" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:checked="true"-->
+<!--                    android:checkedIconVisible="false"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:text="📚 Manga"-->
+<!--                    android:textColor="@color/chip_text_selector"-->
+<!--                    app:chipBackgroundColor="@color/chip_bg_selector"-->
+<!--                    app:chipCornerRadius="12dp"-->
+<!--                    app:chipStrokeColor="@color/chip_stroke_selector"-->
+<!--                    app:chipStrokeWidth="1dp"-->
+<!--                    app:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:checkedIconVisible="false"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:text="📍 Manhwa"-->
+<!--                    android:textColor="@color/chip_text_selector"-->
+<!--                    app:chipBackgroundColor="@color/chip_bg_selector"-->
+<!--                    app:chipCornerRadius="12dp"-->
+<!--                    app:chipStrokeColor="@color/chip_stroke_selector"-->
+<!--                    app:chipStrokeWidth="1dp"-->
+<!--                    app:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:checkedIconVisible="false"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:text="📖 Light Novel"-->
+<!--                    android:textColor="@color/chip_text_selector"-->
+<!--                    app:chipBackgroundColor="@color/chip_bg_selector"-->
+<!--                    app:chipCornerRadius="12dp"-->
+<!--                    app:chipStrokeColor="@color/chip_stroke_selector"-->
+<!--                    app:chipStrokeWidth="1dp"-->
+<!--                    app:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />-->
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Subtitle 2 -->
+            <TextView
+                android:id="@+id/tv_sub_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="16dp"
+                android:text="Hãy chọn ít nhất một thể loại mà bạn thấy hứng thú để đề xuất."
+                android:textColor="@color/black_text"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chip_group_types" />
+
+            <!-- ChipGroup 2 -->
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_genres"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="32dp"
+                app:chipSpacingHorizontal="12dp"
+                app:chipSpacingVertical="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_sub_2"
+                app:singleSelection="false">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="💥 Action"
+                    android:textColor="@color/black"
+                    app:chipBackgroundColor="@color/background_screem"
+                    app:chipCornerRadius="12dp"
+                    app:chipStrokeColor="@color/border_buton"
+                    app:chipStrokeWidth="1dp" />
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:text="💕 Romance"-->
+<!--                    android:textColor="@color/chip_text_selector"-->
+<!--                    app:chipBackgroundColor="@color/chip_bg_selector"-->
+<!--                    app:chipCornerRadius="12dp"-->
+<!--                    app:chipStrokeColor="@color/chip_stroke_selector"-->
+<!--                    app:chipStrokeWidth="1dp" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:checked="true"-->
+<!--                    android:text="🔎 Mystery"-->
+<!--                    android:textColor="@color/chip_text_selector"-->
+<!--                    app:chipBackgroundColor="@color/chip_bg_selector"-->
+<!--                    app:chipCornerRadius="12dp"-->
+<!--                    app:chipStrokeColor="@color/chip_stroke_selector"-->
+<!--                    app:chipStrokeWidth="1dp" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:text="🌿 Slice of life"-->
+<!--                    android:textColor="@color/chip_text_selector"-->
+<!--                    app:chipBackgroundColor="@color/chip_bg_selector"-->
+<!--                    app:chipCornerRadius="12dp"-->
+<!--                    app:chipStrokeColor="@color/chip_stroke_selector"-->
+<!--                    app:chipStrokeWidth="1dp" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:checked="true"-->
+<!--                    android:text="🏰 Fantasy"-->
+<!--                    android:textColor="@color/chip_text_selector"-->
+<!--                    app:chipBackgroundColor="@color/chip_bg_selector"-->
+<!--                    app:chipCornerRadius="12dp"-->
+<!--                    app:chipStrokeColor="@color/chip_stroke_selector"-->
+<!--                    app:chipStrokeWidth="1dp" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:text="🤣 Comedy"-->
+<!--                    android:textColor="@color/chip_text_selector"-->
+<!--                    app:chipBackgroundColor="@color/chip_bg_selector"-->
+<!--                    app:chipCornerRadius="12dp"-->
+<!--                    app:chipStrokeColor="@color/chip_stroke_selector"-->
+<!--                    app:chipStrokeWidth="1dp" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:text="🤖 Sci-fi"-->
+<!--                    android:textColor="@color/chip_text_selector"-->
+<!--                    app:chipBackgroundColor="@color/chip_bg_selector"-->
+<!--                    app:chipCornerRadius="12dp"-->
+<!--                    app:chipStrokeColor="@color/chip_stroke_selector"-->
+<!--                    app:chipStrokeWidth="1dp" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:text="🏅 Sports"-->
+<!--                    android:textColor="@color/chip_text_selector"-->
+<!--                    app:chipBackgroundColor="@color/chip_bg_selector"-->
+<!--                    app:chipCornerRadius="12dp"-->
+<!--                    app:chipStrokeColor="@color/chip_stroke_selector"-->
+<!--                    app:chipStrokeWidth="1dp" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:text="🥀 Drama"-->
+<!--                    android:textColor="@color/chip_text_selector"-->
+<!--                    app:chipBackgroundColor="@color/chip_bg_selector"-->
+<!--                    app:chipCornerRadius="12dp"-->
+<!--                    app:chipStrokeColor="@color/chip_stroke_selector"-->
+<!--                    app:chipStrokeWidth="1dp" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:text="📜 Historical"-->
+<!--                    android:textColor="@color/chip_text_selector"-->
+<!--                    app:chipBackgroundColor="@color/chip_bg_selector"-->
+<!--                    app:chipCornerRadius="12dp"-->
+<!--                    app:chipStrokeColor="@color/chip_stroke_selector"-->
+<!--                    app:chipStrokeWidth="1dp" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:checked="true"-->
+<!--                    android:text="👻 Horror"-->
+<!--                    android:textColor="@color/chip_text_selector"-->
+<!--                    app:chipBackgroundColor="@color/chip_bg_selector"-->
+<!--                    app:chipCornerRadius="12dp"-->
+<!--                    app:chipStrokeColor="@color/chip_stroke_selector"-->
+<!--                    app:chipStrokeWidth="1dp" />-->
+
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- Bottom Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_done"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginHorizontal="32dp"
+        android:text="Hoàn thành"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:backgroundTint="@color/backgrount_button"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

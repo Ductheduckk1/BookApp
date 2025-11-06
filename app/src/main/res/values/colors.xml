@@ -154,6 +154,7 @@
 
 <!--    new colors-->
     <color name="background_screem">#FAFAFA</color>
+<!--    <color name="background_screem">#E6E6E6</color>-->
     <color name="border_buton">#A0A8B9</color>
     <color name="black_text">#121926</color>
     <color name="backgrount_button">#948979</color>

@@ -41,7 +41,9 @@
     <FrameLayout
         android:id="@+id/fl_bottom_sheet"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/frg_ctn"
+        app:layout_anchorGravity="bottom|center" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/frg_ctn"
