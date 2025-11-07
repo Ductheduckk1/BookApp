@@ -1,17 +1,19 @@
-package com.example.bookapp.features.home
+@file:Suppress("DEPRECATION")
+
+package com.example.bookapp.features.browser
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.bookapp.core.BaseFragment
-import com.example.bookapp.databinding.FragmentHomeBinding
+import com.example.bookapp.databinding.FragmentBookBowserBinding
 import com.example.bookapp.features.adapter.BookAdapter
 import com.example.bookapp.features.models.Book
 
-class HomeFragment : BaseFragment<FragmentHomeBinding>(){
+class BookBrowserFragment : BaseFragment<FragmentBookBowserBinding>() {
     private lateinit var adapter: BookAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -25,17 +27,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(){
             Book("Eldest", "Fantasy", "https://images.dog.ceo//breeds//labrador//fudji.jpg", 10, 40),
         )
         adapter = BookAdapter(books) { book ->
-            Toast.makeText(requireContext(), "Clicked: ${book.title}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Clicked: ${book.title}", Toast.LENGTH_SHORT).show()
         }
 
-        views.rcNovel.apply {
-            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-            adapter = this@HomeFragment.adapter
+        views.rcBook.apply {
+            layoutManager = GridLayoutManager(context, 2)
+            adapter = this@BookBrowserFragment.adapter
         }
-        
-        views.rcSuggestion.apply {
-            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-            adapter = this@HomeFragment.adapter
+
+        views.btnBack.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
         }
     }
 
@@ -65,8 +66,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(){
     override fun getBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): FragmentHomeBinding {
-        return FragmentHomeBinding.inflate(inflater, container, false)
+    ): FragmentBookBowserBinding {
+        return FragmentBookBowserBinding.inflate(inflater, container, false)
     }
-
 }

@@ -76,7 +76,8 @@ fun <T : Fragment> AppCompatActivity.replaceFragment(
         params: Parcelable? = null,
         tag: String? = null,
         allowStateLoss: Boolean = false,
-        useCustomAnimation: Boolean = false
+        useCustomAnimation: Boolean = false,
+        addToBackStack: Boolean = false
 ) {
     supportFragmentManager.commitTransaction(allowStateLoss) {
         if (useCustomAnimation) {
@@ -88,6 +89,8 @@ fun <T : Fragment> AppCompatActivity.replaceFragment(
             )
         }
         replace(container.id, fragmentClass, params.toMvRxBundle(), tag)
+        if (addToBackStack) addToBackStack(tag)
+        this
     }
 }
 

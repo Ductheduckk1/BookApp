@@ -5,11 +5,12 @@ import android.os.Bundle
 import com.example.bookapp.core.BaseActivity
 import com.example.bookapp.core.extensions.replaceFragment
 import com.example.bookapp.databinding.ActivityMainBinding
+import com.example.bookapp.features.browser.BookBrowserFragment
 import com.example.bookapp.features.home.HomeFragment
+import com.example.bookapp.features.setting.SettingFragment
 import kotlin.jvm.java
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
-    private var prevItemSelected: Int? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if(isFirstCreation()){
@@ -26,8 +27,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 R.id.navigation_book_list -> {
                     setupBottomNavigation(R.id.navigation_book_list)
                 }
-                R.id.navigation_profile -> {
-                    setupBottomNavigation(R.id.navigation_profile)
+                R.id.navigation_setting -> {
+                    setupBottomNavigation(R.id.navigation_setting)
                 }
                 else -> {}
             }
@@ -41,20 +42,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
         when (id) {
             R.id.navigation_home -> if (currentFragment !is HomeFragment) {
-                replaceFragment(views.frgCtn, HomeFragment::class.java)
+                replaceFragment(views.frgCtn, HomeFragment::class.java, useCustomAnimation = true)
             }
-//            R.id.navigation_map -> if (currentFragment !is MapFragment) {
-//                replaceFragment(views.frgCtn, MapFragment::class.java)
-//            }
-//            R.id.navigation_geo_photo -> if (currentFragment !is GeoPhotoFragment) {
-//                replaceFragment(views.frgCtn, GeoPhotoFragment::class.java)
-//            }
-//            R.id.navigation_stream -> {
-//                startActivity(Intent(this, StreamActivity::class.java))
-//            }
-//            R.id.navigation_setting -> if (currentFragment !is SettingFragment) {
-//                replaceFragment(views.frgCtn, SettingFragment::class.java)
-//            }
+            R.id.navigation_explore -> if (currentFragment !is BookBrowserFragment) {
+                replaceFragment(views.frgCtn, BookBrowserFragment::class.java, useCustomAnimation = true, addToBackStack = true)
+            }
+            R.id.navigation_setting -> if (currentFragment !is SettingFragment) {
+                replaceFragment(views.frgCtn, SettingFragment::class.java, useCustomAnimation = true, addToBackStack = true)
+            }
         }
     }
     override fun getBinding(): ActivityMainBinding {
