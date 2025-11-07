@@ -22,7 +22,7 @@
             android:padding="8dp">
 
             <ImageView
-                android:id="@+id/imgAvatar"
+                android:id="@+id/iv_avatar"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:src="@drawable/ic_profile"
@@ -36,7 +36,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tvName"
+                    android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cheyenne Curtis"
@@ -52,7 +52,7 @@
                     android:textColor="@color/gray" />
 
                 <TextView
-                    android:id="@+id/tvEmail"
+                    android:id="@+id/tv_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Shinei.Nouzen@nordlicht.com"
@@ -61,7 +61,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/btnEdit"
+                android:id="@+id/btn_edit"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
@@ -95,7 +95,7 @@
 
                 <!-- Item 1 -->
                 <LinearLayout
-                    android:id="@+id/btnPersonalInfo"
+                    android:id="@+id/btn_personal_info"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:gravity="center_vertical"
@@ -125,7 +125,7 @@
 
                 <!-- Item 2 -->
                 <LinearLayout
-                    android:id="@+id/btnSecurity"
+                    android:id="@+id/btn_security"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:gravity="center_vertical"
@@ -155,7 +155,7 @@
 
                 <!-- Item 3 -->
                 <LinearLayout
-                    android:id="@+id/btnNotifications"
+                    android:id="@+id/btn_notifications"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:gravity="center_vertical"
@@ -242,7 +242,7 @@
                 android:showDividers="middle">
 
                 <LinearLayout
-                    android:id="@+id/btnIntro"
+                    android:id="@+id/btn_intro"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:gravity="center_vertical"
@@ -271,7 +271,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/btnLicense"
+                    android:id="@+id/btn_license"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:gravity="center_vertical"
